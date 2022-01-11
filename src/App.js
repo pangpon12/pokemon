@@ -4,6 +4,8 @@ import './App.css';
 import useSound from 'use-sound';
 import song from './gacha.mp3';
 import theme from './song.mp3';
+import { Button, Icon } from 'semantic-ui-react'
+
 function App() {
 
   const [employeeList, setemployeeList] = useState(null);
@@ -11,6 +13,10 @@ function App() {
   const [play] = useSound(song);
 
   const [themep] = useSound(theme);
+
+  const [playm, { stop, isPlaying }] = useSound(theme);
+
+
 
   var i = Math.floor(Math.random() * 890) + 1;
   const getEmployees = () => {
@@ -20,10 +26,23 @@ function App() {
     });
   }
 
-
   const twoF = () => {
     getEmployees(); play();
   };
+
+  const ON = () => {
+   
+      playm();
+    
+    
+  };
+  const OFF = () => {
+  
+  
+
+    stop();
+  
+};
 
 
   return (
@@ -34,17 +53,23 @@ function App() {
 
 
       <br></br>
+<div>สามารถเปิด/ปิดเพลงประกอบได้</div>
 
+      <Button content='สุ่มโปเกม่อน' onClick={twoF}/>
 
-      <button onClick={themep}>เปิดเพลง
-      </button>
+      <Button.Group icon>
+    <Button onClick={ON}>
+      <Icon name='play' />
+    </Button>
+    <Button onClick={OFF}>
+      <Icon name='pause' />
+    </Button>
+    
+  </Button.Group>
 
 
       <br></br>
-
-      <button onClick={twoF}>สุ่มโปเกม่อน</button>
-
-      <br></br>
+      
       {employeeList && (
 
 
