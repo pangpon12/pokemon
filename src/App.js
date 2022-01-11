@@ -47,12 +47,20 @@ function App() {
 
   return (
     <div class="center">
-      <h1 style={{ color: 'DimGray' }}>สุ่ม pokemon ของคุณ</h1>
+      <h1 style={{ color: 'black' }}>สุ่ม pokemon ของคุณ</h1>
+<Button color='facebook' href ="https://www.facebook.com/teerapat.sangrach.7/" target ="blank">
+      <Icon name='facebook' /> Facebook
+    </Button>
+  
+    
+    <Button color='github'  href ="https://github.com/pangpon12" target ="blank">
+      <Icon name='github' /> github
+    </Button>
+    
+      <div style={{ color: 'black' }}>จัดทำโดยนายธีรภัทร แสงราช ใช้เพื่อยื่น portfolio เท่านั้น</div>
 
-      <div style={{ color: 'DimGray' }}>จัดทำโดยนายธีรภัทร แสงราช ใช้เพื่อยื่น portfolio เท่านั้น</div>
 
-
-      <br></br>
+      <br></br>  
 <div>สามารถเปิด/ปิดเพลงประกอบได้</div>
 
       <Button content='สุ่มโปเกม่อน' onClick={twoF}/>

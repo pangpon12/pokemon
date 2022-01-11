@@ -38,13 +38,16 @@
 }
 .center {
   text-align: center;
+  
 }
 
 .colorfornt {
-  color: rgb(32, 32, 32);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
 body {
-  background-color: #adb2ba;
+  background-color: #a6aaaf;
+  font-weight: bold;
 }
 .image{
   height: 30%;
